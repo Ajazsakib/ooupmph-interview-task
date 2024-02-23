@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaPlus } from "react-icons/fa6";
 import { CiHome } from "react-icons/ci";
 import { IoMdSearch } from "react-icons/io";
@@ -20,19 +20,19 @@ const Sidebar = ({ showSideBar, handleSideBar, handleCloseSidebar }) =>
                 <div className='menu'>
                     <ul>
                         <li>
-                            <a href='#'><FaPlus />PLUS</a>
+                            <a><FaPlus />PLUS</a>
                         </li>
                         <li>
-                            <a href='#'><CiHome />Home</a>
+                            <a><CiHome />Home</a>
                         </li>
                         <li>
-                            <a href='#'><IoMdSearch />Search</a>
+                            <a><IoMdSearch />Search</a>
                         </li>
                         <li>
-                            <a href='#'><FaRegEnvelope />Messages</a>
+                            <a><FaRegEnvelope />Messages</a>
                         </li>
                         <li>
-                            <a href='#'><IoMdNotificationsOutline />Notifications</a>
+                            <a><IoMdNotificationsOutline />Notifications</a>
                         </li>
                         <li className='profile-info'>
                             <span className='img'>
@@ -44,7 +44,7 @@ const Sidebar = ({ showSideBar, handleSideBar, handleCloseSidebar }) =>
                             </span>
                         </li>
                         <li>
-                            <a href='#'><GiHamburgerMenu />Settings</a>
+                            <a><GiHamburgerMenu />Settings</a>
                         </li>
                     </ul>
                 </div>
