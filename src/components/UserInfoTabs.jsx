@@ -15,16 +15,16 @@ const UserInfoTabs = () =>
     const handleTabChange = (id) =>
     {
         setActiveTab(id)
-        if (id == 1) {
+        if (id === 1) {
             setUserInfoContentState(userInfoTruthData)
         }
-        if (id == 2) {
+        if (id === 2) {
             setUserInfoContentState(userInfoFunData)
         }
-        if (id == 3) {
+        if (id === 3) {
             setUserInfoContentState(userInfoDebateData)
         }
-        if (id == 4) {
+        if (id === 4) {
             setUserInfoContentState(userInfoOpportunityData)
         }
     }

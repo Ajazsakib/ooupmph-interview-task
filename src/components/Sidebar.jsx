@@ -15,7 +15,7 @@ const Sidebar = ({ showSideBar, handleSideBar, handleCloseSidebar }) =>
             <div className="sidebar">
                 <IoCloseSharp className='close-sidebar' onClick={handleCloseSidebar} />
                 <div className='logo'>
-                    <img src="images/logo.png" />
+                    <img src="images/logo.png" alt='logo' />
                 </div>
                 <div className='menu'>
                     <ul>

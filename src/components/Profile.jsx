@@ -10,7 +10,7 @@ const Profile = () =>
             <div className='left'>
                 <div className='left-content'>
                     <div className='img'>
-                        <img src="images/profileSmall.jpg" />
+                        <img src="images/profileSmall.jpg" alt='small profile' />
                     </div>
                     <div className='text'><b>70%</b> Vibess Match</div>
                 </div>
