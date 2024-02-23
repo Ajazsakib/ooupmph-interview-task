@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import MainContent from './components/MainContent';
+import Sidebar from './components/Sidebar';
+import { GiHamburgerMenu } from "react-icons/gi";
+function App()
+{
+  const [showSideBar, setShowSidebar] = useState(false)
 
-function App() {
+  const handleSideBar = () =>
+  {
+
+    setShowSidebar(true)
+  }
+
+  const handleCloseSidebar = () =>
+  {
+    setShowSidebar(false)
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={`sidebar-container ${showSideBar ? "pos" : ""}`}>
+        <div className='hamburger-button'>
+          {!showSideBar && <GiHamburgerMenu onClick={handleSideBar} />}
+        </div>
+        <Sidebar showSideBar={showSideBar} handleSideBar={handleSideBar} handleCloseSidebar={handleCloseSidebar} />
+      </div>
+      <div className='main-container'>
+        <MainContent />
+      </div>
     </div>
   );
 }

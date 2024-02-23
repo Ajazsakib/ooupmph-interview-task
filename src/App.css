@@ -1,38 +1,584 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --headingColor: #363636;
+
+  --textColor: #8f8f8f;
+}
+
 .App {
+  display: flex;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.main-content-container {
+  width: 60%;
+  margin-left: 150px;
+}
+
+/* Start CSS For sidebar*/
+.sidebar-container {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid #dddddd;
+}
+
+.sidebar {
+  padding: 30px;
+}
+
+.hamburger-button {
+  display: none;
+}
+
+.close-sidebar {
+  display: none;
+}
+
+.sidebar .logo {
+  width: 80%;
+}
+
+.sidebar .logo img {
+  width: 100%;
+}
+
+.sidebar .menu ul {
+  list-style: none;
+  padding-left: 16px;
+}
+
+.sidebar .menu ul li {
+  margin: 24px 0;
+}
+
+.sidebar .menu ul li a {
+  text-decoration: none;
+  color: var(--headingColor);
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.sidebar .menu ul li a svg {
+  margin-right: 30px;
+}
+
+.sidebar .menu ul li.profile-info {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .menu ul li.profile-info .img {
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+}
+
+.sidebar .menu ul li.profile-info .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.sidebar .menu ul li.profile-info .text {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .menu ul li.profile-info .text .text-heading {
+  font-weight: 600;
+}
+
+.sidebar .menu ul li.profile-info .text .text-desc {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.sidebar .menu ul li.profile-info .text span b {
+  font-size: 12px;
+  color: #e9c154;
+  margin-right: 10px;
+}
+
+/* End CSS For sidebar*/
+/* Start CSS for profile component*/
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile .left {
+  margin-right: 50px;
+}
+
+.profile .left .img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.profile .left .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+
+}
+
+.profile .left .text {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.profile .left .text {
+  color: var(--textColor)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile .left .text b {
+  color: var(--headingColor)
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.user-info {
+  display: flex;
+}
+
+.circle {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.circle .title {
+  font-weight: 600;
+  margin-left: -18px;
+  color: var(--headingColor);
+}
+
+.circle .score {
+  font-weight: 600;
+  color: var(--textColor);
+  position: relative;
+  top: -40%;
+  right: 7%;
+}
+
+.demo-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 120px;
+}
+
+.demo-image img {
+  width: 100%;
+}
+
+.arc {
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin-left: 30px;
+  margin-top: 16px;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.dot:nth-child(1) {
+  top: 48%;
+  left: -8%;
+}
+
+.dot:nth-child(2) {
+  top: 17%;
+  left: -4%;
+}
+
+.dot:nth-child(3) {
+  top: -8%;
+  left: 8%;
+}
+
+.dot:nth-child(4) {
+  top: -15.5%;
+  left: 24%;
+}
+
+.dot:nth-child(5) {
+  top: -7%;
+  left: 42.5%;
+}
+
+.dot:nth-child(6) {
+  top: 16.5%;
+  left: 54%;
+}
+
+.dot:nth-child(7) {
+  top: 49%;
+  left: 58%;
+}
+
+.userinfo1 .name {
+  color: var(--headingColor);
+  font-weight: 600;
+}
+
+.userinfo1 .email {
+  color: var(--textColor);
+  margin-bottom: 30px;
+}
+
+.userinfo1 .vibes {
+  color: var(--textColor);
+  font-weight: 500;
+  margin: 10px;
+}
+
+.userinfo1 .vibes .posts {
+  margin-left: 50px;
+}
+
+.follower-box {
+  display: inline-flex;
+  padding: 12px;
+  background-color: #efefef;
+  border-radius: 50px;
+  width: auto;
+}
+
+.follower-box div {
+  border-right: 1px solid #cdbdbd;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.follower-box div:last-child {
+  border-right: 0;
+}
+
+.follower-box div h3 {
+  color: var(--headingColor);
+}
+
+.follower-box div p {
+  color: var(--textColor)
+}
+
+.aboutUser {
+  margin: 30px 0;
+  color: var(--headingColor);
+  font-size: 16px;
+}
+
+.designation {
+  display: flex;
+}
+
+.designation div {
+  margin: 0 30px 0 0;
+  color: var(--headingColor)
+}
+
+/* End CSS for profile component*/
+
+/** Start CSS For social details box **/
+.social-details {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.social-details .social-details-box {
+  width: 100px;
+  padding: 16px;
+  background-color: #edeef2;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--textColor);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.social-details .social-details-box.darkBg {
+  background-color: var(--headingColor);
+  color: #ffffff;
 }
+
+.social-details .social-details-box .icons svg {
+  font-size: 24px;
+}
+
+.social-details .social-details-box:hover {
+  color: #fa3b87;
+  font-weight: 600;
+}
+
+/** End CSS For social details box **/
+
+/* Start CSS for tab menu */
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid var(--textColor);
+  margin: 30px 0;
+
+}
+
+.tab-menu .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 60px;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 2px solid var(--textColor);
+  position: relative;
+  top: 2px;
+}
+
+.tab-menu .tab .icon {
+  margin-right: 6px;
+  padding: 6px;
+}
+
+.tab-menu .tab .icon svg {
+  font-size: 20px;
+}
+
+.tab-menu .tab .text {
+  margin-top: -5px;
+}
+
+.tab-menu .tab:hover {
+  color: #fa3b87;
+  border-bottom: 2px solid #fa3b87;
+}
+
+.tab-menu .tab.active {
+  color: #fa3b87;
+  border-bottom: 2px solid #fa3b87;
+}
+
+.image-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-container .images {
+  flex: 0 0 30%;
+  margin: 0 3% 3% 0;
+}
+
+.image-container .images img {
+  width: 100%;
+
+}
+
+.userInfoFilter {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.filterBox {
+  display: flex;
+  align-items: center;
+  background-color: #edeef2;
+  border-radius: 50px;
+  margin-right: 30px;
+  padding-right: 16px;
+}
+
+.filterBox .img {
+  width: 30px;
+  height: 30px;
+}
+
+.filterBox .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}
+
+.filterBox .text {
+  padding: 8px;
+}
+
+/* End CSS for tab menu */
+
+/* Start CSS For Mobile responsive **/
+
+@media screen and (max-width: 992px) {
+  .hamburger-button {
+    display: block;
+  }
+
+    .profile .left {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+  .close-sidebar {
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .sidebar-container {
+    position: fixed;
+    left: -250px;
+    transition: 0.5s;
+  }
+
+  .sidebar-container .hamburger-button {
+    position: absolute;
+    right: -50px;
+    top: 18px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .sidebar-container.pos {
+    position: fixed;
+    left: 0;
+    background: #ffffff;
+    z-index: 999999;
+  }
+  .main-content-container {
+    width: 100%;
+    margin-left: 0;
+  }
+ .profile {
+  flex-direction: column;
+ }
+ .profile .right {
+  margin-top: 30px;
+ }
+ .arc {
+  margin-left: 0;
+  width: 90px;
+    height: 45px;
+ }
+ .dot {
+  width: 8px;
+    height: 8px;
+ }
+ .user-info {
+  padding: 0 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+ .vibes {
+  flex: 0 0 100%;
+  text-align: center;
+ }
+ .circle .score {
+   font-weight: 600;
+   color: var(--textColor);
+   position: relative;
+   top: -36%;
+   right: 20%;
+ }
+ .userinfo1 .name,  .userinfo1 .email {
+    text-align: center;
+ }
+ .userinfo1 .follower-box {
+    display: inline-flex;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .userinfo1 .aboutUser {
+  width: 80%;
+  text-align: center;
+  margin: 30px auto;
+ }
+ .designation {
+  justify-content: center;
+ }
+ .social-details .social-details-box {
+    width: 65px;
+    margin-right: 8px;
+    background: transparent;
+    box-shadow: none;
+ }
+.social-details .social-details-box .text {
+    font-size: 12px;
+  }
+    .tab-menu {
+      width: 90%;
+      margin: 30px;
+    }
+  .tab-menu .tab {
+    margin-right: 20px;
+  }
+    .userInfoFilter {
+      padding-left: 16px;
+    }
+        .tab-menu .tab .icon {
+          margin-right: 0;
+        }
+
+        .tab-menu .tab .text {
+          font-size: 12px;
+        }
+        .filterBox {
+          margin-bottom: 10px;
+        }
+}
+
+/* End CSS For Mobile responsive **/
+
+/* Start CSS For tab responsive*/
+@media (min-width: 992px) and (max-width: 1200px) {
+  /* Your styles for the specified range go here */
+  .profile .left .img {
+    width: 150px;
+    height: 150px;
+  }
+    .arc {
+      margin-left: 16px;
+    }
+        .social-details .social-details-box {
+          margin-right: 20px;
+        }
+        .filterBox {
+          margin-bottom: 10px;
+        }
+}
+/* End CSS For tab responsive*/
