@@ -21,7 +21,7 @@ const Halfcircle = ({ theme, title, score }) =>
         if (theme === "green") {
             setColors(green)
         }
-    }, [])
+    }, [theme])
 
     return (
         <div className='circle'>
