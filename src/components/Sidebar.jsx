@@ -20,19 +20,19 @@ const Sidebar = ({ showSideBar, handleSideBar, handleCloseSidebar }) =>
                 <div className='menu'>
                     <ul>
                         <li>
-                            <a><FaPlus />PLUS</a>
+                            <span><FaPlus />PLUS</span>
                         </li>
                         <li>
-                            <a><CiHome />Home</a>
+                            <span><CiHome />Home</span>
                         </li>
                         <li>
-                            <a><IoMdSearch />Search</a>
+                            <span><IoMdSearch />Search</span>
                         </li>
                         <li>
-                            <a><FaRegEnvelope />Messages</a>
+                            <span><FaRegEnvelope />Messages</span>
                         </li>
                         <li>
-                            <a><IoMdNotificationsOutline />Notifications</a>
+                            <span><IoMdNotificationsOutline />Notifications</span>
                         </li>
                         <li className='profile-info'>
                             <span className='img'>
@@ -44,7 +44,7 @@ const Sidebar = ({ showSideBar, handleSideBar, handleCloseSidebar }) =>
                             </span>
                         </li>
                         <li>
-                            <a><GiHamburgerMenu />Settings</a>
+                            <span><GiHamburgerMenu />Settings</span>
                         </li>
                     </ul>
                 </div>

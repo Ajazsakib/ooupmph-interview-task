@@ -67,14 +67,15 @@
   margin: 24px 0;
 }
 
-.sidebar .menu ul li a {
+.sidebar .menu ul li span {
   text-decoration: none;
   color: var(--headingColor);
   font-size: 16px;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
-.sidebar .menu ul li a svg {
+.sidebar .menu ul li span svg {
   margin-right: 30px;
 }
 
